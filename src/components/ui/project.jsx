@@ -8,8 +8,8 @@ const Project = ({ topic, children }) => {
         <span className="h-[70%] w-[2px] bg-white" />
       </div>
       <div className="w-[80%]">
-        <h2>{topic}</h2>
-        <p>{children}</p>
+        <h2 className="text-white font-bold text-2xl">{topic}</h2>
+        <p className="text-gray-200">{children}</p>
       </div>
     </div>
   );

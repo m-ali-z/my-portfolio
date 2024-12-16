@@ -6,7 +6,7 @@ const Navbar = () => {
           <a href="#about">About</a>
         </li>
         <li className="hover:text-white transition-all duration-300">
-          <a href="#portfolio">Portfolio</a>
+          <a href="#projects">Portfolio</a>
         </li>
         <li className="hover:text-white transition-all duration-300">
           <a href="#contact">Contact</a>

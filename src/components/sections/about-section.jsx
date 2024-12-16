@@ -3,10 +3,7 @@ import Skill from "../ui/skill";
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="relative px-8 py-40 h-auto bg-[#121921e0] overflow-hidden"
-    >
+    <section id="about" className="relative px-8 py-40 h-auto bg-[#121921e0] ">
       <h1 className="text-5xl font-bold text-white mb-10">About</h1>
       <div className="flex gap-2 justify-start">
         <hr className="w-14 flex-none border-t-4 text-white mt-3" />
@@ -30,7 +27,7 @@ const About = () => {
 
       <div className="mt-10 ">
         <h1 className="font-bold text-5xl text-center text-white">My Skills</h1>
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center w-full ">
           <Skill
             imagesPath={["nodejs.svg"]}
             height={150}
@@ -63,7 +60,6 @@ const About = () => {
           />
         </div>
       </div>
-      <Dots />
     </section>
   );
 };
