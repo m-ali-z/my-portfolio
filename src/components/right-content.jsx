@@ -1,9 +1,4 @@
-import {
-  FacebookIcon,
-  FactoryIcon,
-  LinkedinIcon,
-  TwitterIcon,
-} from "lucide-react";
+import { FacebookIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
 const RightContent = () => {
   return (
     <div className="text-white text-6xl flex justify-end absolute right-[10%] bottom-[10%] z-10">

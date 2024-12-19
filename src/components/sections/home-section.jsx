@@ -12,8 +12,8 @@ const Home = () => {
       >
         <Navbar />
         <Intro />
-        <RightContent />
         <Picture />
+        <RightContent />
       </section>
     </>
   );

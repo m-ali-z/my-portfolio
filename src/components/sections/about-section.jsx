@@ -1,27 +1,46 @@
-import Dots from "../ui/dots";
+import { useEffect, useRef } from "react";
 import Skill from "../ui/skill";
-
+import { motion, useAnimation } from "motion/react";
+import { useInView } from "react-intersection-observer";
 const About = () => {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: -150,
+        transition: { type: "spring", duration: 1 },
+      });
+    }
+    if (!inView) {
+      animation.start({
+        x: 300,
+        transition: { type: "spring", duration: 1 },
+      });
+    }
+
+    console.log("Element is in view: ", inView);
+  }, [inView, animation]);
   return (
     <section id="about" className="relative px-8 py-40 h-auto bg-[#121921e0] ">
       <h1 className="text-5xl font-bold text-white mb-10">About</h1>
       <div className="flex gap-2 justify-start">
         <hr className="w-14 flex-none border-t-4 text-white mt-3" />
-        <p className="text-white text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-          ducimus nulla voluptate dolorem neque culpa iste perspiciatis iusto
-          inventore tempora quod, magni suscipit, in facilis autem nobis
-          excepturi quidem? Possimus? Assumenda mollitia sequi quae eos
-          aspernatur provident iste enim quis, adipisci velit odit natus
-          molestiae similique sed consectetur? Dignissimos nobis illo odio
-          ratione, accusantium aliquid harum consequuntur vero nostrum itaque.
-          Voluptates modi possimus pariatur sequi expedita minus perferendis
-          natus placeat quidem nisi consectetur neque unde esse qui iste vel
-          rerum harum, velit a fuga ducimus commodi. Mollitia, natus? Id, quas.
-          Beatae numquam, velit ut ea, harum rerum, iusto tempora sint
-          doloremque aspernatur libero doloribus facere voluptate at fugiat
-          molestiae dolorem in ad omnis corporis. Accusantium nam dolorum
-          architecto iusto tempore?
+        <p className="text-white text-lg pl-10  leading-loose tracking-wide">
+          Hi, I’m Muhammad Ali, a passionate Software Engineer with a strong
+          foundation in programming and web development. I specialize in
+          creating responsive, dynamic, and user-friendly websites, blending
+          functionality with visually appealing designs. I have a solid
+          understanding of core CS concepts, including Object-Oriented
+          Programming, Data Structures and Algorithms, Databases, Operating
+          Systems, and Networking, which form the backbone of my technical
+          skills. Currently, I am honing my expertise in web development and
+          exploring the art of building animated websites that captivate users
+          and enhance their digital experience. Beyond coding, I enjoy solving
+          complex problems, learning new technologies, and collaborating on
+          projects that make a meaningful impact. My goal is to craft websites
+          that not only look great but also deliver seamless functionality.
+          Let’s connect and bring your ideas to life!
         </p>
       </div>
 

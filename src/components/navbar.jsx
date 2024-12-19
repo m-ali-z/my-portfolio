@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <nav className="h-16 text-xl flex justify-center items-center mb-4">
+    <nav className="h-16 text-xl flex justify-center items-center mb-4 z-50">
       <ul className="text-gray-400 flex cursor-pointer justify-center gap-8 ">
         <li className="hover:text-white transition-all duration-300">
           <a href="#about">About</a>
